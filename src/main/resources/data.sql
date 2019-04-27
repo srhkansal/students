@@ -1,0 +1,1 @@
+--insert into students (id, rollNumber, firstName, lastName, dateOfBirth, grade) values (1, "1001", "Mike", "Dz", "01/01/1990", "6");

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: StudentsService
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create
+  datasource:
+    url: jdbc:mysql://mysql-standalone:3306/schools?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ms
+    password: password
+application:
+  port: 8080
+
+## User this link for banner text generation - http://patorjk.com/software/taag/#p=display&h=0&v=0&f=Standard

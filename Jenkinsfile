@@ -12,7 +12,6 @@ pipeline {
 	        	sh './gradlew clean build'
 	    	}
 		}
-    }
 
 	stage('SonarQube analysis') {
 	    withSonarQubeEnv('My SonarQube Server') {
@@ -27,6 +26,7 @@ pipeline {
         error "Pipeline aborted due to quality gate failure: ${qg.status}"
     }
   }
+}
 }
 
     post { 

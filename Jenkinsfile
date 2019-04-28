@@ -11,7 +11,7 @@ pipeline {
             agent any
             steps {
               withSonarQubeEnv('My SonarQube Server') {
-              	sh './gradlew sonarqube'
+              	sh './gradlew --info sonarqube'
               }
             }
           }

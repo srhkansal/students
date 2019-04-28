@@ -8,9 +8,8 @@ pipeline {
             	echo 'Checkout ends'
             }
         }
-    }
 
-    stage('build step') {
+        stage('build step') {
             steps {
             	echo 'build starts'
             	./gradlew buildß
@@ -18,6 +17,8 @@ pipeline {
             }
         }
     }
+
+    
 
     post { 
         always { 

@@ -47,8 +47,8 @@ targetCompatibility = 1.8
 sonarqube {
     properties {
     	property "sonar.projectKey","students"
-  		property "sonar.host.url","http://localhost:7002"
-  		property "sonar.login","eefe524f87a75423374a3b5be9046651c39b49b2"
+  		property "sonar.host.url","http://localhost:9000"
+  		property "sonar.login","da39107ab410c3725256c58bb61aec3e137a0ca9"
   	}
 }
 

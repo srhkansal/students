@@ -6,6 +6,12 @@ pipeline {
 	        	checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/srhkansal/students.git']]])
 	    	}
 		}
+
+		stage('build project') {
+	    	steps {
+	        	sh './gradlew clean build'
+	    	}
+		}
     }
 
     

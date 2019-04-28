@@ -1,13 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('checkout') {
-            steps {
-            	echo 'Checkout starts'
-            	git checkout 'https://github.com/srhkansal/students.git'
-            	echo 'Checkout ends'
-            }
-        }
+        stage('Checkout external proj') {
+	    	steps {
+	        	checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/srhkansal/students.git']]])
+	    	}
+		}
     }
 
     

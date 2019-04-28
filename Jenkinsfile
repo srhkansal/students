@@ -8,14 +8,6 @@ pipeline {
             	echo 'Checkout ends'
             }
         }
-
-        stage('build step') {
-            steps {
-            	echo 'build starts'
-            	./gradlew buildß
-                echo 'build ends'
-            }
-        }
     }
 
     

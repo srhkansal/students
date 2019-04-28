@@ -7,11 +7,17 @@ pipeline {
 	    	}
 		}
 
+		stage('build project') {
+	    	steps {
+	        	sh './gradlew build --status'
+	    	}
+		}
+
 		stage("build & SonarQube analysis") {
             agent any
             steps {
-              withSonarQubeEnv('My SonarQube Server') {
-              	sh './gradlew --info sonarqube'
+              withSonarQubeEnv('SonarQube') {
+              	sh './gradlew sonarqube'
               }
             }
           }

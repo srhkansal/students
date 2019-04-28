@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('checkout') {
             steps {
-                echo 'Hello World'
+            	echo 'Checkout starts'
+            	git checkout 'https://github.com/srhkansal/students.git'
+                echo 'Checkout ends'
             }
         }
     }

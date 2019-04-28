@@ -9,7 +9,9 @@ pipeline {
 
 		stage('build project') {
 	    	steps {
+	    		gradle --stop
 	        	sh './gradlew build'
+	        	gradle --stop
 	    	}
 		}
 
@@ -17,7 +19,9 @@ pipeline {
             agent any
             steps {
               withSonarQubeEnv('My SonarQube Server') {
+              	gradle --stop
                 sh './gradlew sonarqube'
+                gradle --stop
               }
             }
           }

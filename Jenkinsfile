@@ -17,7 +17,7 @@ pipeline {
             agent any
             steps {
               withSonarQubeEnv('SonarQube') {
-              	sh './gradlew sonarqube'
+              	sh './gradlew sonarqube --stacktrace'
               }
             }
           }

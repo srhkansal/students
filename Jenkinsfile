@@ -13,19 +13,20 @@ pipeline {
 	    	}
 		}
 
-          stage("build & SonarQube analysis") {
-            agent any
-            steps {
-              withSonarQubeEnv('My SonarQube Server') {
-                sh './gradlew sonarqube'
-              }
-            }
-          }
-          
+		stage('Sonarqube') {
+		    steps {
+		        withSonarQubeEnv('sonarqube') {
+		            sh './gradlew sonarqube'
+		        }
+		        timeout(time: 10, unit: 'MINUTES') {
+		            waitForQualityGate abortPipeline: true
+		        }
+		    }
+		}ß    
 }
 
     post { 
-        always { 
+        always { ßß
             echo 'I will always say Hello again!'
         }
     }

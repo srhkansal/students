@@ -13,7 +13,6 @@ pipeline {
 	    	}
 		}
 
-        stages {
           stage("build & SonarQube analysis") {
             agent any
             steps {
@@ -29,7 +28,6 @@ pipeline {
               }
             }
           }
-        }
 }
 
     post { 

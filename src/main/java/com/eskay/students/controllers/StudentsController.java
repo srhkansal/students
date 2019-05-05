@@ -5,6 +5,7 @@ import com.eskay.students.entity.StudentsEntity;
 import com.eskay.students.services.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.eskay.students.dao.StudentsRepository;
 
 @RestController
 public class StudentsController {

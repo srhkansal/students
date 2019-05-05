@@ -17,6 +17,10 @@ public class StudentsController {
         return studentsService.getStudent(id);
     }
 
+    public StudentsEntity getStudent_US02_branch(@PathVariable int id) {
+        return studentsService.getStudent(id);
+    }
+
     @PostMapping("/students")
     public String recordStudentsData(@RequestBody StudentsEntity student) {
         return studentsService.recordStudentsData(student);

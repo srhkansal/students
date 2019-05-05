@@ -19,6 +19,7 @@ public class StudentsController {
     }
 
     public StudentsEntity getStudentAnotherMethod(@PathVariable int id) {
+        System.out.println("sysout statement");
         return studentsService.getStudent(id);
     }
 

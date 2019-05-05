@@ -17,7 +17,8 @@ pipeline {
             agent any
             steps {
               withSonarQubeEnv('SonarQube') {
-              	sh './gradlew sonarqube -Dsonar.branch.name=us01_students -Dsonar.branch.target=students --stacktrace'
+                  sh './gradlew sonarqube --stacktrace'
+              	//sh './gradlew sonarqube -Dsonar.branch.name=us01_students -Dsonar.branch.target=students --stacktrace'
               }
             }
           }

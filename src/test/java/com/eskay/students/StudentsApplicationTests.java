@@ -53,4 +53,30 @@ public class StudentsApplicationTests {
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 		JSONAssert.assertEquals(exampleCourseJson, result.getResponse().getContentAsString(), false);
 	}
+
+	@Test
+	public void testMethod_new() throws Exception {
+
+		StudentsEntity ste = new StudentsEntity();
+		ste.setId(2);
+		ste.setRollNumber("2");
+		ste.setFirstName("SK");
+		ste.setLastName("Lastr");
+		ste.setDateOfBirth("wwww");
+		ste.setGrade("6");
+
+		String exampleCourseJson = "{\n" +
+				"  \"id\": 2,\n" +
+				"  \"rollNumber\": \"2\",\n" +
+				"  \"firstName\": \"SK\",\n" +
+				"  \"lastName\": \"Lastr\",\n" +
+				"  \"dateOfBirth\": \"wwww\",\n" +
+				"  \"grade\": \"6\"\n" +
+				"}";
+
+		Mockito.when(studentsService.getStudent(Mockito.anyInt())).thenReturn(ste);
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/studentsnew/1").accept(MediaType.APPLICATION_JSON);
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+		JSONAssert.assertEquals(exampleCourseJson, result.getResponse().getContentAsString(), false);
+	}
 }

@@ -18,6 +18,7 @@ public class StudentsController {
         return studentsService.getStudent(id);
     }
 
+    @GetMapping("/studentsnew/{id}")
     public StudentsEntity getStudentAnotherMethod(@PathVariable int id) {
         System.out.println("sysout statement");
         return studentsService.getStudent(id);

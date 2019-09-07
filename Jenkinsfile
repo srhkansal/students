@@ -12,6 +12,15 @@ pipeline {
 	        	sh './gradlew build --status'
 	    	}
 		}
+
+		stage("build & SonarQube analysis") {
+            agent any
+            steps {
+              withSonarQubeEnv('SonarQube') {
+              	sh './gradlew sonarqube --stacktrace'
+              }
+            }
+          }
           //stage("Quality Gate") {
             //steps {
               //timeout(time: 1, unit: 'HOURS') {

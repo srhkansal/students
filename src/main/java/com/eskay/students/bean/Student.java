@@ -8,6 +8,7 @@ public class Student {
     private String lastName;
     private String dateOfBirth;
     private String grade;
+    private String age;
 
     public int getId() {
         return id;
@@ -55,5 +56,13 @@ public class Student {
 
     public void setGrade(String grade) {
         this.grade = grade;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 }

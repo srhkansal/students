@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class StudentsController {
 
+    private String MY_STRING = "";
+
     @Autowired
     private StudentsService studentsService;
 

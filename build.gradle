@@ -48,7 +48,7 @@ sonarqube {
     properties {
     	property "sonar.projectKey","srhkansal_students"
     	property "sonar.organization","srhkansal-github"
-  		property "sonar.host.url","https://sonarcloud.io"
+  		property "sonar.host.url","https://sonarcloud.io/"
   		property "sonar.login","7208fd3183c0db0d63bdbc3d16fa21622c77aa02"
 		//"2d6196740396b9fe9c0a08bc6549c91cdfdb3683"
   	}

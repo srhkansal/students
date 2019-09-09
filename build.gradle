@@ -50,7 +50,7 @@ sonarqube {
     	property "sonar.organization","srhkansal-github"
   		property "sonar.host.url","https://sonarcloud.io/"
   		property "sonar.login","7208fd3183c0db0d63bdbc3d16fa21622c77aa02"
-		property "sonar.branch.name","release-student"
+		//property "sonar.branch.name","release-student"
 		property "sonar.pullrequest.key","4"
 		property "sonar.pullrequest.branch","release-student"
 		property "sonar.pullrequest.base","master"

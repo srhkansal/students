@@ -23,32 +23,4 @@ public class StudentsController {
     public String recordStudentsData(@RequestBody StudentsEntity student) {
         return studentsService.recordStudentsData(student);
     }
-
-
-    public List<Integer> rightSideView(TreeNode root) {
-        Queue<TreeNode> nodes = new LinkedList<>();
-        List<Integer> rightMostNodes = new LinkedList<>();
-
-        if(root == null)
-            return rightMostNodes;
-
-        nodes.add(root);
-
-        while(!nodes.isEmpty()){
-            int size = nodes.size();
-
-            for ( int i = 0; i<size; i++) {
-                TreeNode current = nodes.poll();
-                if(i == size -1) {
-                    rightMostNodes.add(current.val);
-                }
-
-                if(current.left!=null)
-                    nodes.add(current.left);
-                if(current.right!=null)
-                    nodes.add(current.right);
-            }
-        }
-        return rightMostNodes;
-    }
 }
